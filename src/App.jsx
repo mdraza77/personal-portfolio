@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
+import Projects from "./sections/Projects";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,7 +19,7 @@ function App() {
         <Hero />
         <About />
         <Skills />
-        {/* Baaki sections yaha aayenge */}
+        <Projects />
       </main>
       <Footer />
     </div>
