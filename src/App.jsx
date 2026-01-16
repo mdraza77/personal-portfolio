@@ -10,6 +10,7 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Education from "./sections/Education";
 import Experience from "./sections/Experience";
+import Contact from "./sections/Contact";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,6 +25,7 @@ function App() {
         <Projects />
         <Education />
         <Experience />
+        <Contact />
       </main>
       <Footer />
     </div>
