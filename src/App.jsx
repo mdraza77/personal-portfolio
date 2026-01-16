@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Hero from "./sections/Hero";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,12 +13,12 @@ function App() {
     <div className="bg-slate-950 text-white min-h-screen">
       <Navbar />
       <main>
-        {/* <Hero /> */}
+        <Hero />
         {/* <About /> */}
         {/* <Projects /> */}
         {/* Baaki sections yaha aayenge */}
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
