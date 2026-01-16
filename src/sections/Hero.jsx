@@ -19,6 +19,8 @@ const Hero = () => {
     ],
     resumeLink:
       "https://drive.google.com/file/d/1j3BepvjhfpAbBoLJNJLzcZ-aeJ7cD-O_/view?usp=drive_link",
+
+    Illustration: "public/Illustration.png",
   };
 
   return (
@@ -111,7 +113,7 @@ const Hero = () => {
             {/* Image Container */}
             <div className="relative z-10 w-full h-full rounded-3xl overflow-hidden border border-white/10 bg-[#1a1a1f]/50 backdrop-blur-sm p-4">
               <img
-                src="./my_image/Remote Working 3D Model.png"
+                src={heroData.Illustration}
                 alt="Md Raza Illustration"
                 className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
               />
