@@ -20,7 +20,7 @@ const Hero = () => {
     resumeLink:
       "https://drive.google.com/file/d/1j3BepvjhfpAbBoLJNJLzcZ-aeJ7cD-O_/view?usp=drive_link",
 
-    Illustration: "public/Illustration.png",
+    Illustration: "public/pictures/Illustration.png",
   };
 
   return (
@@ -125,7 +125,7 @@ const Hero = () => {
               transition={{ repeat: Infinity, duration: 3 }}
               className="absolute -top-6 -right-6 bg-[#1a1a1f] border border-white/10 p-4 rounded-2xl shadow-2xl z-20"
             >
-              <div className="text-[#b331e9] font-black text-xl">8.76</div>
+              <div className="text-[#b331e9] font-black text-xl">8.90</div>
               <div className="text-gray-500 text-[10px] uppercase font-bold tracking-tighter">
                 BCA CGPA
               </div>
