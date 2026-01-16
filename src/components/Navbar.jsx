@@ -33,9 +33,12 @@ const Navbar = () => {
     >
       <div className="max-w-[1400px] mx-auto flex justify-between items-center">
         {/* Brand/Logo - Added Letter Spacing & Weight */}
-        <div className="text-2xl font-black tracking-tighter text-white uppercase">
+        <a
+          href="#"
+          className="text-2xl font-black tracking-tighter text-white uppercase hover:opacity-80 transition-opacity"
+        >
           Port<span className="text-[#b331e9]">folio</span>
-        </div>
+        </a>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center space-x-12">
