@@ -29,25 +29,25 @@ const Projects = () => {
       image: "/project_images/singhal-steel-erp-web-and-app.jpeg",
     },
     {
-      title: "Online Mobile Store",
+      title: "Mobile Store",
       category: "Academic",
       description:
         "A full-stack e-commerce platform inspired by Apple, built with user authentication and payment gateway.", //
       tech: ["PHP", "MySQL", "JavaScript", "Bootstrap"], //
       link: "#",
-      github: "https://github.com/mdraza77",
-      image: "/project_images/default.png", //
+      github: "https://github.com/mdraza77/mobile-shop-apple-store.git",
+      image: "/project_images/mobile-shop-user.jpeg", //
     },
-    {
-      title: "LAN Chat Application",
-      category: "Academic",
-      description:
-        "Real-time messaging and file sharing application allowing users to join via a shared network URL.", //
-      tech: ["Python", "Flask"], //
-      link: "#",
-      github: "#",
-      image: "/project_images/default.png",
-    },
+    // {
+    //   title: "LAN Chat Application",
+    //   category: "Academic",
+    //   description:
+    //     "Real-time messaging and file sharing application allowing users to join via a shared network URL.", //
+    //   tech: ["Python", "Flask"], //
+    //   link: "#",
+    //   github: "#",
+    //   image: "/project_images/default.png",
+    // },
   ];
 
   const filteredProjects =

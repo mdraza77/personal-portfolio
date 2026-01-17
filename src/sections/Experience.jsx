@@ -23,15 +23,15 @@ const Experience = () => {
       location: "Salt Lake, Kolkata",
       icon: <Zap className="text-[#b331e9]" />,
     },
-    {
-      role: "Frontend Developer Intern",
-      company: "CodSoft",
-      duration: "Apr 2024 - May 2024",
-      details:
-        "Created responsive web applications including To-Do lists and Portfolio landing pages using HTML, CSS, and JS.",
-      location: "Kolkata, WB",
-      icon: <Award className="text-[#b331e9]" />,
-    },
+    // {
+    //   role: "Frontend Developer Intern",
+    //   company: "CodSoft",
+    //   duration: "Apr 2024 - May 2024",
+    //   details:
+    //     "Created responsive web applications including To-Do lists and Portfolio landing pages using HTML, CSS, and JS.",
+    //   location: "Kolkata, WB",
+    //   icon: <Award className="text-[#b331e9]" />,
+    // },
   ];
 
   const keyContributions = [
