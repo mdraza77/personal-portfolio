@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import Swal from "sweetalert2";
 import { motion } from "framer-motion";
 import {
   Mail,
@@ -37,17 +38,41 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Fetch call exact waisa hi jaisa script.js mein tha
     fetch(scriptURL, { method: "POST", body: new FormData(formRef.current) })
       .then((response) => {
         setIsSubmitting(false);
-        alert("Thank you! Your message has been sent successfully.");
-        formRef.current.reset(); // Form clear logic
+
+        // --- PYARA SA MODERN ALERT ---
+        Swal.fire({
+          title: "Message Sent!",
+          text: "Thank you, Md Raza will get back to you soon.",
+          icon: "success",
+          background: "#121217",
+          color: "#fff",
+          iconColor: "#b331e9",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          customClass: {
+            popup: "rounded-[2rem] border border-white/10 shadow-2xl",
+          },
+        });
+
+        formRef.current.reset();
       })
       .catch((error) => {
         setIsSubmitting(false);
+
+        Swal.fire({
+          title: "Error!",
+          text: "Something went wrong. Please try again.",
+          icon: "error",
+          background: "#121217",
+          color: "#fff",
+          confirmButtonColor: "#b331e9",
+        });
+
         console.error("Error!", error.message);
-        alert("Oops! Something went wrong. Please try again.");
       });
   };
 
