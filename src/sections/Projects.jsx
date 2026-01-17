@@ -16,7 +16,7 @@ const Projects = () => {
       tech: ["Laravel", "PHP", "MySQL", "REST API"], //
       link: "#",
       github: "#",
-      image: "./project_images/OnlineMobileStore.png", //
+      image: "public/project_images/bgai-australian-cristmas-tree-app.jpeg", //
     },
     {
       title: "Singhal Steel ERP",
@@ -26,7 +26,7 @@ const Projects = () => {
       tech: ["Laravel", "Spatie", "MySQL"], //
       link: "#",
       github: "#",
-      image: "./project_images/OnlineMobileStore.png",
+      image: "public/project_images/singhal-steel-erp-web-and-app.jpeg",
     },
     {
       title: "Online Mobile Store",
@@ -36,7 +36,7 @@ const Projects = () => {
       tech: ["PHP", "MySQL", "JavaScript", "Bootstrap"], //
       link: "#",
       github: "https://github.com/mdraza77",
-      image: "./project_images/OnlineMobileStore.png", //
+      image: "public/project_images/default.png", //
     },
     {
       title: "LAN Chat Application",
@@ -46,7 +46,7 @@ const Projects = () => {
       tech: ["Python", "Flask"], //
       link: "#",
       github: "#",
-      image: "./project_images/OnlineMobileStore.png",
+      image: "public/project_images/default.png",
     },
   ];
 
