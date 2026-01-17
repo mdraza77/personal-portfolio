@@ -20,7 +20,7 @@ const Navbar = () => {
   ];
 
   const resumeLink =
-    "https://drive.google.com/file/d/1j3BepvjhfpAbBoLJNJLzcZ-aeJ7cD-O_/view?usp=drive_link";
+    "https://drive.google.com/file/d/1M7xwR6GyQ7pWRby6pXjWLNi_k4YdnJ-J/view?usp=sharing";
 
   return (
     <nav
