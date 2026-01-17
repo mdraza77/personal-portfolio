@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import {
   Mail,
@@ -8,22 +8,47 @@ import {
   Github,
   Linkedin,
   Twitter,
+  Loader2, // Processing state ke liye ek icon
 } from "lucide-react";
 
 const Contact = () => {
-  // Contact details variables mein
+  const formRef = useRef(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Aapka existing Google Apps Script URL
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbyqbb0xRxeJjsgI6zbt_0KTpwYlebdsJAr4r2zIkaeqgcS25beOlk0lBNkG65q8lUMp/exec";
+
   const contactInfo = {
-    email: "mdraza8397@gmail.com", //
-    phone: "+91 74776 50108", //
-    address: "Islampur, West Bengal, India", //
+    email: "mdraza8397@gmail.com",
+    phone: "+91 74776 50108",
+    address: "Islampur, West Bengal, India",
     socials: [
-      { icon: <Github size={20} />, link: "https://github.com/mdraza77" }, //
+      { icon: <Github size={20} />, link: "https://github.com/mdraza77" },
       {
         icon: <Linkedin size={20} />,
         link: "https://www.linkedin.com/in/md-raza-web-developer",
-      }, //
-      { icon: <Twitter size={20} />, link: "https://x.com/MdRaza01" }, //
+      },
+      { icon: <Twitter size={20} />, link: "https://x.com/MdRaza01" },
     ],
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Fetch call exact waisa hi jaisa script.js mein tha
+    fetch(scriptURL, { method: "POST", body: new FormData(formRef.current) })
+      .then((response) => {
+        setIsSubmitting(false);
+        alert("Thank you! Your message has been sent successfully.");
+        formRef.current.reset(); // Form clear logic
+      })
+      .catch((error) => {
+        setIsSubmitting(false);
+        console.error("Error!", error.message);
+        alert("Oops! Something went wrong. Please try again.");
+      });
   };
 
   return (
@@ -43,7 +68,7 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Left Side: Contact Cards */}
+          {/* Left Side: Contact Cards (Design Unchanged) */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -94,7 +119,6 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Social Connection */}
             <div className="mt-12 p-8 rounded-[2rem] bg-gradient-to-br from-[#1a1a1f] to-[#121217] border border-white/5">
               <p className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6 text-center">
                 Follow My Socials
@@ -114,13 +138,18 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Right Side: Modern Form */}
+          {/* Right Side: Form (Design Unchanged, Logic Added) */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             className="bg-[#121217] p-8 md:p-12 rounded-[2.5rem] border border-white/5 relative overflow-hidden"
           >
-            <form className="space-y-6 relative z-10">
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              name="contact-form"
+              className="space-y-6 relative z-10"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-[10px] font-bold uppercase tracking-widest text-gray-500 ml-2">
@@ -128,6 +157,8 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
+                    name="your-name" //
+                    required
                     placeholder="John Doe"
                     className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 text-sm focus:outline-none focus:border-[#b331e9] transition-all text-white placeholder:text-gray-700"
                   />
@@ -138,6 +169,8 @@ const Contact = () => {
                   </label>
                   <input
                     type="email"
+                    name="your-email" //
+                    required
                     placeholder="hello@example.com"
                     className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 text-sm focus:outline-none focus:border-[#b331e9] transition-all text-white placeholder:text-gray-700"
                   />
@@ -150,6 +183,8 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
+                  name="your-subject" //
+                  required
                   placeholder="Project Inquiry"
                   className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 text-sm focus:outline-none focus:border-[#b331e9] transition-all text-white placeholder:text-gray-700"
                 />
@@ -160,22 +195,35 @@ const Contact = () => {
                   Message
                 </label>
                 <textarea
+                  name="message" //
+                  required
                   rows="4"
                   placeholder="Tell me about your project..."
                   className="w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 text-sm focus:outline-none focus:border-[#b331e9] transition-all text-white placeholder:text-gray-700 resize-none"
                 ></textarea>
               </div>
 
-              <button className="w-full group flex items-center justify-center gap-3 bg-gradient-to-r from-[#b331e9] to-[#8b31ff] py-5 rounded-2xl font-black uppercase tracking-widest text-xs shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all active:scale-95">
-                Send Message{" "}
-                <Send
-                  size={16}
-                  className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-                />
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full group flex items-center justify-center gap-3 bg-gradient-to-r from-[#b331e9] to-[#8b31ff] py-5 rounded-2xl font-black uppercase tracking-widest text-xs shadow-xl shadow-purple-500/20 hover:shadow-purple-500/40 transition-all active:scale-95 disabled:opacity-70"
+              >
+                {isSubmitting ? (
+                  <>
+                    Processing... <Loader2 size={16} className="animate-spin" />
+                  </>
+                ) : (
+                  <>
+                    Send Message{" "}
+                    <Send
+                      size={16}
+                      className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                    />
+                  </>
+                )}
               </button>
             </form>
 
-            {/* Background Decor */}
             <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-[#b331e9]/5 rounded-full blur-3xl"></div>
           </motion.div>
         </div>
