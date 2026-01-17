@@ -31,7 +31,7 @@ const About = () => {
         icon: <GraduationCap className="text-[#b331e9]" />,
       }, //
     ],
-    image: "public/pictures/md-raza.jpeg", //
+    image: "/pictures/md-raza.jpeg", //
   };
 
   return (

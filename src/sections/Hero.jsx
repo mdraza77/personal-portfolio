@@ -20,7 +20,7 @@ const Hero = () => {
     resumeLink:
       "https://drive.google.com/file/d/1j3BepvjhfpAbBoLJNJLzcZ-aeJ7cD-O_/view?usp=drive_link",
 
-    Illustration: "public/pictures/Illustration.png",
+    Illustration: "/pictures/Illustration.png",
   };
 
   return (
