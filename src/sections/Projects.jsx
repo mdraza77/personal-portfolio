@@ -5,7 +5,7 @@ import { ExternalLink, Github, Code2, Globe } from "lucide-react";
 const Projects = () => {
   const [filter, setFilter] = useState("All");
 
-  const categories = ["All", "Web Apps", "Internship", "Academic"];
+  const categories = ["All", "Web Apps", "Internship", "Academic", "Personal"];
 
   const projectsData = [
     {
@@ -38,16 +38,16 @@ const Projects = () => {
       github: "https://github.com/mdraza77/mobile-shop-apple-store.git",
       image: "/project_images/mobile-shop-user.jpeg", //
     },
-    // {
-    //   title: "LAN Chat Application",
-    //   category: "Academic",
-    //   description:
-    //     "Real-time messaging and file sharing application allowing users to join via a shared network URL.", //
-    //   tech: ["Python", "Flask"], //
-    //   link: "#",
-    //   github: "#",
-    //   image: "/project_images/default.png",
-    // },
+    {
+      title: "Zing",
+      category: "Personal",
+      description:
+        "A secure, real-time social networking platform featuring encrypted messaging, media sharing, and instant connectivity. Built with a focus on privacy and seamless user experience.",
+      tech: ["Laravel", "PHP", "PostgreSQL", "Tailwind CSS", "Alpine.js"],
+      link: "#",
+      github: "https://github.com/mdraza77/insta.git",
+      image: "/project_images/zing.jpeg",
+    },
   ];
 
   const filteredProjects =
