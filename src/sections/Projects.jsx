@@ -48,6 +48,16 @@ const Projects = () => {
       github: "https://github.com/mdraza77/insta.git",
       image: "/project_images/zing.jpeg",
     },
+    {
+      title: "Az Furniture",
+      category: "Personal",
+      description:
+        "A furniture e-commerce platform built using PHP and MySQL, featuring product management, cart system, and order handling. Implemented AJAX for real-time cart updates and improved user interaction, along with a structured backend for efficient data handling.",
+      tech: ["PHP", "MySQL", "CSS", "Ajax"],
+      link: "#",
+      github: "https://github.com/mdraza77/az_furniture.git",
+      image: "/project_images/az-furniture.jpeg",
+    },
   ];
 
   const filteredProjects =
