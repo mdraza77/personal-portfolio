@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, Download, Github, Linkedin } from "lucide-react";
+import { RESUME_LINK } from "../constants/data";
 
 const Hero = () => {
   // Data
@@ -17,8 +18,6 @@ const Hero = () => {
         link: "https://www.linkedin.com/in/md-raza-web-developer",
       },
     ],
-    resumeLink:
-      "https://drive.google.com/file/d/1Tzf_aMj1anF9y0qKtOguUQRwXgoOqZpK/view?usp=sharing",
 
     Illustration: "/pictures/Illustration.png",
   };
@@ -73,7 +72,7 @@ const Hero = () => {
             </a>
 
             <a
-              href={heroData.resumeLink}
+              href={RESUME_LINK}
               target="_blank"
               className="flex items-center gap-2 bg-white/5 border border-white/10 hover:bg-white/10 px-8 py-4 rounded-2xl font-bold text-sm uppercase tracking-widest transition-all"
             >

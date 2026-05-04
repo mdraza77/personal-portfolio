@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { RESUME_LINK } from "../constants/data";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,15 +13,12 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Experience", href: "#experience" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "about" },
+    { name: "Skills", href: "skills" },
+    { name: "Projects", href: "projects" },
+    { name: "Experience", href: "experience" },
+    { name: "Contact", href: "contact" },
   ];
-
-  const resumeLink =
-    "https://drive.google.com/file/d/1Tzf_aMj1anF9y0qKtOguUQRwXgoOqZpK/view?usp=sharing";
 
   return (
     <nav
@@ -59,7 +57,7 @@ const Navbar = () => {
 
           {/* Gradient Resume Button - Added Pulse Shadow */}
           <a
-            href={resumeLink}
+            href={RESUME_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-[#b331e9] to-[#8b31ff] px-8 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest text-white shadow-[0_0_15px_rgba(179,49,233,0.3)] hover:shadow-[0_0_25px_rgba(179,49,233,0.5)] transition-all duration-300 active:scale-95"
@@ -116,7 +114,7 @@ const Navbar = () => {
           ))}
           <li className="pt-4">
             <a
-              href={resumeLink}
+              href={RESUME_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-gradient-to-r from-[#b331e9] to-[#8b31ff] w-full py-4 rounded-2xl font-bold uppercase tracking-widest"
