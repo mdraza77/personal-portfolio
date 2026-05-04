@@ -10,42 +10,42 @@ import {
 } from "lucide-react";
 
 const Skills = () => {
-  // Yasham Internship aur projects se synthesized data
   const skillCategories = [
     {
       title: "Backend Development",
       icon: <Server className="text-purple-500" />,
       skills: [
-        { name: "PHP & Laravel", level: "85%" }, //
-        { name: "RESTful APIs", level: "80%" }, //
-        { name: "Python", level: "60%" }, //
+        { name: "PHP & Laravel", level: "85%" },
+        { name: "RESTful APIs", level: "80%" },
+        { name: "Python", level: "60%" },
       ],
     },
     {
       title: "Frontend Development",
       icon: <Layout className="text-blue-500" />,
       skills: [
-        { name: "React.js", level: "75%" }, // Modern update
-        { name: "Tailwind CSS", level: "85%" }, // Modern update
-        { name: "JavaScript (ES6+)", level: "70%" }, //
-        { name: "Bootstrap", level: "90%" }, //
+        { name: "React.js", level: "75%" },
+        { name: "Tailwind CSS", level: "85%" },
+        { name: "JavaScript (ES6+)", level: "70%" },
+        { name: "Bootstrap", level: "90%" },
       ],
     },
     {
       title: "Database Management",
       icon: <Database className="text-green-500" />,
       skills: [
-        { name: "MySQL", level: "85%" }, //
-        { name: "Database Design", level: "75%" }, //
+        { name: "MySQL", level: "85%" },
+        { name: "PostgreSQL", level: "80%" },
+        { name: "Database Design", level: "75%" },
       ],
     },
     {
       title: "Tools & Version Control",
       icon: <Wrench className="text-orange-500" />,
       skills: [
-        { name: "Git & GitHub", level: "92%" }, //
-        { name: "Postman", level: "80%" }, //
-        { name: "SDLC Practices", level: "75%" }, //
+        { name: "Git & GitHub", level: "92%" },
+        { name: "Postman", level: "80%" },
+        { name: "SDLC Practices", level: "75%" },
       ],
     },
   ];
@@ -120,7 +120,7 @@ const Skills = () => {
             "Laravel",
             "MySQL",
             "GitLab",
-            "Bootstrap",
+            "Tailwind CSS",
           ].map((tech) => (
             <div
               key={tech}

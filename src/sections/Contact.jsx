@@ -9,14 +9,13 @@ import {
   Github,
   Linkedin,
   Twitter,
-  Loader2, // Processing state ke liye ek icon
+  Loader2,
 } from "lucide-react";
 
 const Contact = () => {
   const formRef = useRef(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Aapka existing Google Apps Script URL
   const scriptURL =
     "https://script.google.com/macros/s/AKfycbyqbb0xRxeJjsgI6zbt_0KTpwYlebdsJAr4r2zIkaeqgcS25beOlk0lBNkG65q8lUMp/exec";
 
@@ -42,7 +41,6 @@ const Contact = () => {
       .then((response) => {
         setIsSubmitting(false);
 
-        // --- PYARA SA MODERN ALERT ---
         Swal.fire({
           title: "Message Sent!",
           text: "Thank you, Md Raza will get back to you soon.",
@@ -93,7 +91,7 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Left Side: Contact Cards (Design Unchanged) */}
+          {/* Left Side: Contact Cards */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -163,7 +161,7 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Right Side: Form (Design Unchanged, Logic Added) */}
+          {/* Right Side: Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}

@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { User, Code2, GraduationCap, Award } from "lucide-react";
 
 const About = () => {
-  // Aapka data variables mein (Grounded in your files)
   const aboutData = {
     title: "About Me",
     subtitle: "Web Developer", //

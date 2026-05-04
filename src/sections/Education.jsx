@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { GraduationCap, Award, BookOpen, Star } from "lucide-react";
 
 const Education = () => {
-  // Aapke records aur achievements
+  // records and achievements
   const educationData = [
     {
       degree: "Bachelor of Computer Application (BCA)",
