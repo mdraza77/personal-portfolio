@@ -5,32 +5,32 @@ import { User, Code2, GraduationCap, Award } from "lucide-react";
 const About = () => {
   const aboutData = {
     title: "About Me",
-    subtitle: "Web Developer", //
+    subtitle: "Web Developer",
     description:
-      "I am a BCA student with a strong interest in web development. Currently focused on enhancing my skills in building and designing web applications, I am actively learning the latest web technologies to gain hands-on experience in the field.", //
+      "BCA graduate and full-stack developer focused on building real-world web applications. Built a social media platform (Zing) using HTML, CSS, JavaScript, PHP Laravel, and PostgreSQL. Cleared CUET PG and preparing for MCA/MSc. Focused on scalable apps, clean UI, and practical problem-solving.",
     stats: [
       {
-        label: "Years Coding",
-        value: "3+",
+        label: "Projects Built",
+        value: "5+",
         icon: <Code2 className="text-[#b331e9]" />,
-      }, //
+      },
       {
-        label: "Projects Completed",
+        label: "Tech Stack",
         value: "5+",
         icon: <User className="text-[#b331e9]" />,
-      }, //
+      },
       {
-        label: "Certifications",
-        value: "5+",
+        label: "Core Focus",
+        value: "Full-Stack",
         icon: <Award className="text-[#b331e9]" />,
-      }, //
+      },
       {
-        label: "Current CGPA",
-        value: "8.90",
+        label: "Main Project",
+        value: "Zing",
         icon: <GraduationCap className="text-[#b331e9]" />,
-      }, //
+      },
     ],
-    image: "/pictures/md-raza.jpeg", //
+    image: "/pictures/md-raza.jpeg",
   };
 
   return (
@@ -76,7 +76,7 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               className="space-y-4"
             >
-              <h3 className="text-2xl font-bold text-[#b331e9] uppercase tracking-widest text-sm">
+              <h3 className="font-bold text-[#b331e9] uppercase tracking-widest text-sm">
                 {aboutData.subtitle}
               </h3>
               <p className="text-gray-400 text-lg leading-relaxed">
@@ -85,15 +85,15 @@ const About = () => {
             </motion.div>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3">
               {aboutData.stats.map((stat, index) => (
                 <motion.div
                   key={index}
                   whileHover={{ translateY: -5 }}
-                  className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all"
+                  className="p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all"
                 >
                   <div className="mb-3">{stat.icon}</div>
-                  <div className="text-2xl font-black text-white">
+                  <div className="text-base font-black text-white">
                     {stat.value}
                   </div>
                   <div className="text-gray-500 text-xs uppercase font-bold tracking-widest">
