@@ -5,25 +5,25 @@ import { ExternalLink, Github, Code2, Globe } from "lucide-react";
 const Projects = () => {
   const [filter, setFilter] = useState("All");
 
-  const categories = ["All", "Web Apps", "Internship", "Academic", "Personal"];
+  const categories = ["All", "Personal", "Internship", "Academic"];
 
   const projectsData = [
     {
       title: "BGAI E-commerce",
       category: "Internship",
       description:
-        "Australia-based Christmas tree e-commerce platform with a complete Admin Panel and RESTful APIs.", //
-      tech: ["Laravel", "PHP", "MySQL", "REST API"], //
+        "Australia-based Christmas tree e-commerce platform with a complete Admin Panel and RESTful APIs.",
+      tech: ["Laravel", "PHP", "MySQL", "REST API"],
       link: "#",
       github: "#",
-      image: "/project_images/bgai-australian-cristmas-tree-app.jpeg", //
+      image: "/project_images/bgai-australian-cristmas-tree-app.jpeg",
     },
     {
       title: "Singhal Steel ERP",
       category: "Internship",
       description:
-        "ERP system featuring secure authentication and role-based access control using Spatie.", //
-      tech: ["Laravel", "Spatie", "MySQL"], //
+        "ERP system featuring secure authentication and role-based access control using Spatie.",
+      tech: ["Laravel", "Spatie", "Breeze", "MySQL"],
       link: "#",
       github: "#",
       image: "/project_images/singhal-steel-erp-web-and-app.jpeg",
@@ -32,11 +32,11 @@ const Projects = () => {
       title: "Mobile Store",
       category: "Academic",
       description:
-        "A full-stack e-commerce platform inspired by Apple, built with user authentication and payment gateway.", //
-      tech: ["PHP", "MySQL", "JavaScript", "Bootstrap"], //
+        "A full-stack e-commerce platform inspired by Apple, built with user authentication and payment gateway.",
+      tech: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
       link: "#",
       github: "https://github.com/mdraza77/mobile-shop-apple-store.git",
-      image: "/project_images/mobile-shop-user.jpeg", //
+      image: "/project_images/mobile-shop-user.jpeg",
     },
     {
       title: "Zing",
