@@ -16,6 +16,8 @@ const Skills = () => {
       icon: <Server className="text-purple-500" />,
       skills: [
         { name: "PHP & Laravel", level: "85%" },
+        { name: "Express.js", level: "50%" },
+        { name: "Node.js", level: "50%" },
         { name: "RESTful APIs", level: "80%" },
         { name: "Python", level: "60%" },
       ],
@@ -36,6 +38,7 @@ const Skills = () => {
       skills: [
         { name: "MySQL", level: "85%" },
         { name: "PostgreSQL", level: "80%" },
+        { name: "MongoDB", level: "75%" },
         { name: "Database Design", level: "75%" },
       ],
     },
@@ -116,12 +119,7 @@ const Skills = () => {
           <span className="text-xs font-bold uppercase tracking-widest text-gray-600 w-full text-center mb-4">
             Hands-on Experience with
           </span>
-          {[
-            "Laravel",
-            "MySQL",
-            "GitLab",
-            "Tailwind CSS",
-          ].map((tech) => (
+          {["Laravel", "MySQL", "GitLab", "Tailwind CSS"].map((tech) => (
             <div
               key={tech}
               className="px-6 py-2 rounded-full bg-white/5 border border-white/10 text-gray-400 text-sm font-semibold hover:text-white transition-colors cursor-default"
