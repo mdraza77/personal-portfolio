@@ -9,6 +9,34 @@ const Projects = () => {
 
   const projectsData = [
     {
+      title: "StaffHub",
+      category: "Personal",
+      description:
+        "A modern HRMS built with Laravel featuring employee management, attendance, leave tracking, payroll, task management, roles & permissions, holidays, announcements, and reporting through an intuitive admin dashboard.",
+      tech: [
+        "Laravel",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "PHP",
+        "JavaScript",
+        "DataTables",
+        "Spatie Permission",
+      ],
+      link: "#",
+      github: "https://github.com/mdraza77/staffhub.git",
+      image: "/project_images/staffhub-dashboard.jpeg",
+    },
+    {
+      title: "Zing",
+      category: "Personal",
+      description:
+        "A secure, real-time social networking platform featuring encrypted messaging, media sharing, and instant connectivity. Built with a focus on privacy and seamless user experience.",
+      tech: ["Laravel", "PHP", "PostgreSQL", "Tailwind CSS", "Alpine.js"],
+      link: "#",
+      github: "https://github.com/mdraza77/insta.git",
+      image: "/project_images/zing.jpeg",
+    },
+    {
       title: "BGAI E-commerce",
       category: "Internship",
       description:
@@ -37,16 +65,6 @@ const Projects = () => {
       link: "#",
       github: "https://github.com/mdraza77/mobile-shop-apple-store.git",
       image: "/project_images/mobile-shop-user.jpeg",
-    },
-    {
-      title: "Zing",
-      category: "Personal",
-      description:
-        "A secure, real-time social networking platform featuring encrypted messaging, media sharing, and instant connectivity. Built with a focus on privacy and seamless user experience.",
-      tech: ["Laravel", "PHP", "PostgreSQL", "Tailwind CSS", "Alpine.js"],
-      link: "#",
-      github: "https://github.com/mdraza77/insta.git",
-      image: "/project_images/zing.jpeg",
     },
     {
       title: "Az Furniture",

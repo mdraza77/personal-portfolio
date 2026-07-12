@@ -11,7 +11,7 @@ const About = () => {
     stats: [
       {
         label: "Projects Built",
-        value: "5+",
+        value: "6+",
         icon: <Code2 className="text-[#b331e9]" />,
       },
       {
@@ -26,7 +26,7 @@ const About = () => {
       },
       {
         label: "Main Project",
-        value: "Zing",
+        value: "StaffHub",
         icon: <GraduationCap className="text-[#b331e9]" />,
       },
     ],
