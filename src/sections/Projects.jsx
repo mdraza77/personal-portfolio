@@ -24,7 +24,7 @@ const Projects = () => {
       ],
       link: "https://staffhub-7imv.onrender.com",
       github: "https://github.com/mdraza77/staffhub.git",
-      image: "/project_images/staffhub-dashboard.jpeg",
+      image: "/project_images/staffhub-dashboard.png",
     },
     {
       title: "Zing",
