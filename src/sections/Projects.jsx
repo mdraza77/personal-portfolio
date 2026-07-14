@@ -22,7 +22,7 @@ const Projects = () => {
         "DataTables",
         "Spatie Permission",
       ],
-      link: "#",
+      link: "https://staffhub-7imv.onrender.com",
       github: "https://github.com/mdraza77/staffhub.git",
       image: "/project_images/staffhub-dashboard.jpeg",
     },
