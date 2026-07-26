@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { RESUME_LINK } from "../constants/data";
 
-const Navbar = () => {
+const Navbar = ({ currentView, onNavigate }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleLinkClick = (e, href) => {
+    e.preventDefault();
+    const sectionId = href.replace("#", "");
+    if (onNavigate) {
+      onNavigate(sectionId);
+    }
+  };
   const [scrolled, setScrolled] = useState(false);
 
   // Scroll effect for extra polish
@@ -33,6 +41,7 @@ const Navbar = () => {
         {/* Brand/Logo - Added Letter Spacing & Weight */}
         <a
           href="#"
+          onClick={(e) => handleLinkClick(e, "#")}
           className="text-2xl font-black tracking-tighter text-white uppercase hover:opacity-80 transition-opacity"
         >
           Port<span className="text-[#b331e9]">folio</span>
@@ -45,6 +54,7 @@ const Navbar = () => {
               <li key={link.name} className="group relative">
                 <a
                   href={link.href}
+                  onClick={(e) => handleLinkClick(e, link.href)}
                   className="hover:text-white transition-colors duration-300"
                 >
                   {link.name}
@@ -105,7 +115,10 @@ const Navbar = () => {
             <li key={link.name}>
               <a
                 href={link.href}
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => {
+                  setIsOpen(false);
+                  handleLinkClick(e, link.href);
+                }}
                 className="text-lg font-medium text-gray-300 hover:text-[#b331e9] transition-colors"
               >
                 {link.name}

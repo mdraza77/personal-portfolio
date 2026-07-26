@@ -10,23 +10,66 @@ import Education from "./sections/Education";
 import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
+import AllProjects from "./sections/AllProjects";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [currentView, setCurrentView] = useState("main");
+
+  const handleNavigate = (sectionId) => {
+    if (currentView !== "main") {
+      setCurrentView("main");
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        } else {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }, 150);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <div className="bg-slate-950 text-white min-h-screen">
-      <Navbar />
+      <Navbar currentView={currentView} onNavigate={handleNavigate} />
       <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Education />
-        <Experience />
-        <Contact />
+        {currentView === "main" ? (
+          <>
+            <Hero />
+            <About />
+            <Skills />
+            <Projects
+              onViewAllProjects={() => {
+                setCurrentView("all-projects");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            />
+            <Education />
+            <Experience />
+            <Contact />
+          </>
+        ) : (
+          <AllProjects
+            onBack={() => {
+              setCurrentView("main");
+              setTimeout(() => {
+                const element = document.getElementById("projects");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }, 150);
+            }}
+          />
+        )}
       </main>
-      <Footer />
+      <Footer currentView={currentView} onNavigate={handleNavigate} />
     </div>
   );
 }
