@@ -37,6 +37,16 @@ const Projects = () => {
       image: "/project_images/zing.jpeg",
     },
     {
+      title: "Zawj",
+      category: "Personal",
+      description:
+        "A full-stack matchmaking platform for Bengali Muslims with secure authentication, detailed user profiles, and advanced partner discovery features.",
+      tech: ["PHP", "PostgreSQL", "JavaScript", "Tailwind CSS"],
+      link: "#",
+      github: "https://github.com/mdraza77/zawj.git",
+      image: "/project_images/zawj.png",
+    },
+    {
       title: "BGAI E-commerce",
       category: "Internship",
       description:
@@ -60,7 +70,7 @@ const Projects = () => {
       title: "Mobile Store",
       category: "Academic",
       description:
-        "A full-stack e-commerce platform inspired by Apple, built with user authentication and payment gateway.",
+        "A full-stack e-commerce platform inspired by Apple, built with user authentication and dummy payment gateway.",
       tech: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
       link: "#",
       github: "https://github.com/mdraza77/mobile-shop-apple-store.git",
