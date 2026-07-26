@@ -11,6 +11,7 @@ import Experience from "./sections/Experience";
 import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
 import AllProjects from "./sections/AllProjects";
+import FrontendMentor from "./sections/FrontendMentor";
 
 function App() {
   const [currentView, setCurrentView] = useState("main");
@@ -51,6 +52,7 @@ function App() {
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
             />
+            <FrontendMentor />
             <Education />
             <Experience />
             <Contact />
