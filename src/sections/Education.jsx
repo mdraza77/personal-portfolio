@@ -11,11 +11,20 @@ import {
 const Education = () => {
   const educationData = [
     {
+      degree: "Master of Computer Applications (MCA)",
+      institution: "Rajiv Gandhi University, formerly Arunachal University",
+      duration: "2026 - Present",
+      details:
+        "Currently pursuing advanced studies in computer science, with a focus on software development, modern technologies, and strengthening practical problem-solving skills.",
+      grade: "Ongoing",
+      icon: <GraduationCap className="text-[#b331e9]" size={20} />,
+    },
+    {
       degree: "Bachelor of Computer Application (BCA)",
       institution: "Maulana Abul Kalam Azad University of Technology, WB",
       duration: "2022 - 2025",
       details:
-        "Currently maintaining a strong academic record with a focus on core computer science subjects.",
+        "Completed a strong foundation in computer science, programming, and software development, while developing practical skills in full-stack web development and modern technologies.",
       grade: "8.90 CGPA",
       icon: <GraduationCap className="text-[#b331e9]" size={20} />,
     },
